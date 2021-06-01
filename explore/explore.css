@@ -1,7 +1,13 @@
 body {
     margin: 0 auto;
-    background: linear-gradient(232.54deg, #EC7C15 0%, #D0A431 117.27%);
+    background: linear-gradient(262.54deg, #EC7C15 0%, #D0A431 117.27%);
     font-family: 'Open Sans', sans-serif;
+}
+
+.nav-block {
+    width: 1640px;
+    height: 84px;
+    margin: 36px 0 60px 0;
 }
 
 .navigation {
@@ -12,8 +18,8 @@ body {
     border-radius: 30px;
     display: flex;
     flex-direction: row;
-    margin: 36px 80px 0 0;
-    float: right;
+    position: absolute;
+    left: 870px;
 }
 
 .nav-button {
@@ -74,4 +80,103 @@ body {
 .profile-img {
     background-image: url(img/profile.svg);
 
+}
+
+.dishes-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.big-card {
+    width: 555px;
+    height: 701px;
+    margin-right: 50px;
+    position: relative;
+
+}
+
+.small-cards-1-container,
+.small-cards-2-container {
+    height: 360px;
+    width: 789px;
+}
+
+.big-card-text {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 41px;
+    color: #FFFFFF;
+    margin: 0 0 20px 0;
+}
+
+.small-cards-2-text,
+.small-cards-1-text {
+    margin: 0 0 10px 20px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 34px;
+    color: #FFFFFF;
+}
+
+.small-cards-1,
+.small-cards-2 {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.small-card-1,
+.small-card-2 {
+    width: 235px;
+    height: 270px;
+    margin-left: 20px;
+    filter: drop-shadow(0px 32px 40px rgba(50, 50, 71, 0.2));
+    border-radius: 20px;
+    position: relative;
+}
+
+.big-card-img {
+    width: 539px;
+    height: 640px;
+    border-radius: 20px;
+}
+
+.big-card-text-block {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    height: 90px;
+    width: 539px;
+    position: absolute;
+    bottom: 0; 
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.big-card-text-inside {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 34px;
+    color: #FFFFFF;
+    margin: 25px 200px 25px 16px;
+}
+
+.small-card-text-block {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    height: 67px;
+    width: 235px;
+    position: absolute;
+    bottom: 0; 
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.small-card-text-inside {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin: 14px 50px 0 6px;
+    width: 140px;
 }
