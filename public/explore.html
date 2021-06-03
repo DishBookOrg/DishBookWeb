@@ -6,6 +6,36 @@
     <title>Explore</title>
     <link rel="stylesheet" href="explore.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+ 
+ 
+     <!-- Firebase -->
+ 
+     <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+ 
+
+    <script>
+        // TODO: Replace the following with your app's Firebase project configuration
+        // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
+        const firebaseConfig = {
+          apiKey: "AIzaSyD-X5KuemUSzr37ddwLQrQIDq2W9qCKeaQ",
+          authDomain: "dishbookapp.firebaseapp.com",
+          databaseURL: "https://dishbookapp.firebaseio.com",
+          projectId: "dishbookapp",
+          storageBucket: "dishbookapp.appspot.com",
+          messagingSenderId: "358983794037",
+          appId: "1:358983794037:web:6a15b893cf94240bc4673c",
+          // measurementId: "G-QSX3TQKRH3",
+        };
+    
+        // Initialize Firebase
+        // App.initializeApp(firebaseConfig);
+        firebase.initializeApp(firebaseConfig);
+        // firebase.analytics();
+      </script>
 </head>
 <body>
     <nav class="nav-block">
