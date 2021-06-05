@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore</title>
-    <link rel="stylesheet" href="explore.css">
+
+    <!-- Connecting to css file and fonts -->
+    <link rel="stylesheet" href="./css/explore.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
+    <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
- 
-     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
     <script>
         const firebaseConfig = {
-          apiKey: "AIzaSyD-X5KuemUSzr37ddwLQrQIDq2W9qCKeaQ",
-          authDomain: "dishbookapp.firebaseapp.com",
-          databaseURL: "https://dishbookapp.firebaseio.com",
-          projectId: "dishbookapp",
-          storageBucket: "dishbookapp.appspot.com",
-          messagingSenderId: "358983794037",
-          appId: "1:358983794037:web:6a15b893cf94240bc4673c",
+        apiKey: "AIzaSyD-X5KuemUSzr37ddwLQrQIDq2W9qCKeaQ",
+        authDomain: "dishbookapp.firebaseapp.com",
+        databaseURL: "https://dishbookapp.firebaseio.com",
+        projectId: "dishbookapp",
+        storageBucket: "dishbookapp.appspot.com",
+        messagingSenderId: "358983794037",
+        appId: "1:358983794037:web:6a15b893cf94240bc4673c",
         };
     
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-      </script>
+    </script>
 </head>
 <body>
+    
+    <!-- Navigation bar -->
     <nav class="nav-block">
         <div class="navigation">
             <div class="nav-button">
@@ -64,7 +67,10 @@
         </div>
     </nav>
     
+    <!-- Main block with dish cards -->
     <div class="dishes-cards">
+
+        <!-- The biggest card at the left side -->
         <div class="big-card">
             <p class="big-card-text">
                 Try it!
@@ -77,7 +83,11 @@
                 </div>
             </div>
         </div>
+
+        <!-- Two rows with small cards -->
         <div>
+
+            <!-- First row with small cards -->
             <div class="small-cards-1-container">
                 <p class="small-cards-1-text">
                     Breakfast
@@ -106,6 +116,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Second row with small cards -->
             <div class="small-cards-2-container">
                 <p class="small-cards-2-text">
                     Lunch
@@ -138,3 +150,4 @@
     </div>
 </body>
 </html>
+

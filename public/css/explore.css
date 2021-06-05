@@ -1,9 +1,11 @@
+/* Background */
 body {
     margin: 0 auto;
     background: linear-gradient(262.54deg, #EC7C15 0%, #D0A431 117.27%);
     font-family: 'Open Sans', sans-serif;
 }
 
+/* Styles for navigation block */
 .nav-block {
     width: 1640px;
     height: 84px;
@@ -34,6 +36,7 @@ body {
     letter-spacing: -0.24px;
 }
 
+/* Styles for selected button */
 .nav-button:hover {
     color: rgba(255, 153, 0, 1);
 }
@@ -42,6 +45,7 @@ body {
     color: rgba(255, 153, 0, 1);
 }
 
+/* Background of nav buttons */
 .img-container {
     margin: 0;
     width: 30px;
@@ -58,36 +62,38 @@ body {
 }
 
 .dish-img {
-    background-image: url(img/book.svg);
+    background-image: url(../img/book.svg);
 }
 
 .dish-img:hover {
-    background-image: url(img/book-select.svg);
+    background-image: url(../img/book-select.svg);
 }
 
 .explore-img {
-    background-image: url(img/search.svg);
+    background-image: url(../img/search.svg);
 }
 
 .new-img {
-    background-image: url(img/new.svg);
+    background-image: url(../img/new.svg);
 }
 
 .shop-img {
-    background-image: url(img/shop-list.svg);
+    background-image: url(../img/shop-list.svg);
 }
 
 .profile-img {
-    background-image: url(img/profile.svg);
+    background-image: url(../img/profile.svg);
 
 }
 
+/* Main block with dish cards  */
 .dishes-cards {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
+/* The biggest card at the left side */
 .big-card {
     width: 555px;
     height: 701px;
@@ -96,18 +102,44 @@ body {
 
 }
 
-.small-cards-1-container,
-.small-cards-2-container {
-    height: 360px;
-    width: 789px;
-}
-
 .big-card-text {
     font-weight: 600;
     font-size: 48px;
     line-height: 41px;
     color: #FFFFFF;
     margin: 0 0 20px 0;
+}
+
+.big-card-img {
+    width: 539px;
+    height: 640px;
+    border-radius: 20px;
+}
+
+.big-card-text-block {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    height: 90px;
+    width: 539px;
+    position: absolute;
+    bottom: 0; 
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.big-card-text-inside {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 34px;
+    color: #FFFFFF;
+    margin: 25px 200px 25px 16px;
+}
+
+/* Two rows with small cards */
+.small-cards-1-container,
+.small-cards-2-container {
+    height: 360px;
+    width: 789px;
 }
 
 .small-cards-2-text,
@@ -134,31 +166,6 @@ body {
     filter: drop-shadow(0px 32px 40px rgba(50, 50, 71, 0.2));
     border-radius: 20px;
     position: relative;
-}
-
-.big-card-img {
-    width: 539px;
-    height: 640px;
-    border-radius: 20px;
-}
-
-.big-card-text-block {
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    height: 90px;
-    width: 539px;
-    position: absolute;
-    bottom: 0; 
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.big-card-text-inside {
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 34px;
-    color: #FFFFFF;
-    margin: 25px 200px 25px 16px;
 }
 
 .small-card-text-block {
