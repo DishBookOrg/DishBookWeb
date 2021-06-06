@@ -89,8 +89,7 @@ body {
 .dishes-cards {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-left: 225px;
+    align-items: center;
 }
 
 /* Two rows with small cards */
