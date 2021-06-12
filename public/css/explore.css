@@ -125,6 +125,9 @@ body {
     bottom: 0; 
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .big-card-text-inside {
@@ -132,7 +135,15 @@ body {
     font-size: 30px;
     line-height: 34px;
     color: #FFFFFF;
-    margin: 25px 200px 25px 16px;
+    margin: 25px 250px 25px 16px;
+}
+
+.time-text-big {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 22px;
+    color: #FFFFFF;
 }
 
 /* Two rows with small cards */
@@ -177,6 +188,9 @@ body {
     bottom: 0; 
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .small-card-text-inside {
@@ -184,6 +198,14 @@ body {
     font-size: 20px;
     line-height: 19px;
     color: #FFFFFF;
-    margin: 14px 50px 0 6px;
+    margin: 0px 10px 0 6px;
     width: 140px;
+}
+
+.time-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
 }
