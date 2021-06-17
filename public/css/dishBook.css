@@ -3,13 +3,57 @@ body {
     margin: 0 auto;
     background: linear-gradient(262.54deg, #EC7C15 0%, #D0A431 117.27%);
     font-family: 'Open Sans', sans-serif;
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
+
 /* Styles for navigation block */
 .nav-block {
     height: 84px;
     margin: 36px 0 60px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Search field */
+.input-holder {
+    display: flex;
+    align-items: center;
+    margin-right: 150px;
+    visibility: hidden;
+}
+
+.search-input {
+    width: 432px;
+    height: 65px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 8px rgba(50, 50, 71, 0.08), 0px 8px 16px rgba(50, 50, 71, 0.06);
+    border-radius: 46.5px;
+    margin-right: 10px;
+    border:none;
+    outline:none;
+    font-size: 24px;
+    line-height: 34px;
+    color: #828282;
+    padding-left: 42px;
+}
+
+.search-icon {
+    width: 82px;
+    height: 82px;       
+    background: #BDBDBD;
+    background-image: url(../img/main-search.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    box-shadow: 0px 8px 8px rgba(50, 50, 71, 0.08), 0px 8px 16px rgba(50, 50, 71, 0.06);
+    border-radius: 46.5px;
+    border:none;
+    outline:none;
+}
+
+/* Navigation buttons */
 .navigation {
     width: 638px;
     height: 84px;
@@ -18,8 +62,6 @@ body {
     border-radius: 30px;
     display: flex;
     flex-direction: row;
-    position: absolute;
-    left: 790px;
 }
 
 .nav-button {
@@ -34,18 +76,9 @@ body {
     letter-spacing: -0.24px;
 }
 
-/* Styles for selected button */
-/* .nav-button:hover {
-    color: rgba(255, 153, 0, 1);
-} */
-
 .selected {
     color: rgba(255, 153, 0, 1);
 }
-
-/* .dish-img:hover {
-    background-image: url(../img/book-select.svg);
-} */
 
 /* Background of nav buttons */
 .img-container {
