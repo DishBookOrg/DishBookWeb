@@ -3,9 +3,8 @@ body {
     margin: 0 auto;
     background-image: url(../img/main-image.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 1680px;
-    height: 1123px;
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
 
 /* Style for block with authorization */
