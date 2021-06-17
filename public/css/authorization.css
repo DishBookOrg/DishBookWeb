@@ -1,0 +1,62 @@
+/* Background */
+body {
+    margin: 0 auto;
+    background-image: url(../img/main-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1680px;
+    height: 1123px;
+}
+
+/* Style for block with authorization */
+.authorization-container {
+    width: 571px;
+    height: 537px;
+    margin: 293px auto;
+    background: rgba(47, 47, 53, 0.4);
+    box-shadow: 0px 48px 56px rgba(50, 50, 71, 0.3);
+    border-radius: 30px;
+}
+
+.authorization-icon {
+    width: 143px;
+    height: 143px;
+    margin: 39px 214px 0px;
+    margin-bottom: 32px;
+    filter: drop-shadow(0px 32px 40px rgba(50, 50, 71, 0.2));
+}
+
+.authorization-title {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 41px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+/* Style for buttons */
+.buttons {
+    border: none; 
+    outline: none;
+    height: 44px;
+    width: 300px;
+    filter: drop-shadow(0px 12px 12px rgba(50, 50, 71, 0.08)), drop-shadow(0px 16px 24px rgba(50, 50, 71, 0.08));
+    border-radius: 10px;
+}
+
+.buttons:hover {
+    opacity: 0.9;
+}
+
+.google-button {
+    margin: 0 135px 42px;
+    background-image: url(../img/google.png);
+}
+
+.apple-button {
+    margin: 0px 135px;
+    background-image: url(../img/apple.png);
+}
