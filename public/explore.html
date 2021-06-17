@@ -24,13 +24,13 @@
         //const firebase = require('firebase');
         //import firestore from 'firebase/firestore' 
         const firebaseConfig = {
-        apiKey: "AIzaSyD-X5KuemUSzr37ddwLQrQIDq2W9qCKeaQ",
-        authDomain: "dishbookapp.firebaseapp.com",
-        databaseURL: "https://dishbookapp.firebaseio.com",
-        projectId: "dishbookapp",
-        storageBucket: "dishbookapp.appspot.com",
-        messagingSenderId: "358983794037",
-        appId: "1:358983794037:web:6a15b893cf94240bc4673c",
+            apiKey: "AIzaSyD-X5KuemUSzr37ddwLQrQIDq2W9qCKeaQ",
+            authDomain: "dishbookapp.firebaseapp.com",
+            databaseURL: "https://dishbookapp.firebaseio.com",
+            projectId: "dishbookapp",
+            storageBucket: "dishbookapp.appspot.com",
+            messagingSenderId: "358983794037",
+            appId: "1:358983794037:web:6a15b893cf94240bc4673c",
         };
     
         // Initialize Firebase
@@ -45,10 +45,10 @@
         require("firebase/firestore");
 
         firebase.initializeApp({
-        apiKey: 'AIzaSyD-X5KuemUSzr37ddwLQrQIDq2W9qCKeaQ',
-        authDomain: 'dishbookapp.firebaseapp.com',
-        projectId: 'dishbookapp'
-    });
+            apiKey: 'AIzaSyD-X5KuemUSzr37ddwLQrQIDq2W9qCKeaQ',
+            authDomain: 'dishbookapp.firebaseapp.com',
+            projectId: 'dishbookapp'
+        });
 
         let db = firebase.firestore(); 
     </script>
@@ -58,6 +58,14 @@
     
     <!-- Navigation bar -->
     <nav class="nav-block">
+
+        <!-- Search field -->
+        <div class="input-holder">
+            <input type="text" class="search-input" placeholder="Search your dish" />
+            <button class="search-icon"></button>
+        </div>
+
+        <!-- Navigation buttons -->
         <div class="navigation">
             <div class="nav-button">
                 <p class="img-container">
