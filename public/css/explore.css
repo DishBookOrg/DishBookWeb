@@ -9,7 +9,6 @@ body {
 
 /* Styles for navigation block */
 .nav-block {
-    width: 1640px;
     height: 84px;
     margin: 36px 0 60px 0;
     display: flex;
@@ -127,7 +126,7 @@ body {
 .big-card {
     width: 555px;
     height: 701px;
-    margin-right: 50px;
+    /* margin-right: 50px; */
     position: relative;
 }
 
