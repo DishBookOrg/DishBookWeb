@@ -23,6 +23,8 @@
 // });
 
 const tryItDiv = document.querySelector('#dishes-cards')
+const smallCardBreakfast = document.querySelector('#small-cards-1')
+const smallCardDinner = document.querySelector('#small-cards-2')
 
 function renderBigCard(doc){
    
@@ -64,6 +66,45 @@ function renderBigCard(doc){
     tryItDiv.appendChild(bigCard);
 }
 
+
+function renderSmallCard(doc) {
+
+    let smallCard = document.createElement('div');
+    smallCard.classList.add("small-card-1");
+    let smallCardTextBlock = document.createElement('div');
+    smallCardTextBlock.classList.add("small-card-text-block");
+    let smallCardTextInside = document.createElement('p');
+    smallCardTextInside.classList.add("small-card-text-inside");
+    let imageTime = document.createElement('img');
+    imageTime.src = "./img/time.svg";
+    let timeTextSmall = document.createElement('p');
+    timeTextSmall.classList.add("time-text");
+
+    smallCard.appendChild(smallCardTextBlock);
+
+    smallCardTextBlock.appendChild(smallCardTextInside);
+    smallCardTextBlock.appendChild(imageTime);
+    smallCardTextBlock.appendChild(timeTextSmall);
+
+    smallCardTextInside.textContent = doc.data().dishName;
+    timeTextSmall.textContent = doc.data().dishTotalTime;
+
+    var httpsReference = storage.refFromURL(doc.data().dishImageURL);
+    console.log(httpsReference);
+    httpsReference.getDownloadURL().then(function(url) {
+        console.log('Got download URL');
+        console.log(url);
+        smallCard.style.backgroundImage = "url(" + url + ")";
+    });
+
+    if (doc.data().dishRation == "Dinner") {
+        smallCardDinner.appendChild(smallCard);
+    } else {
+        smallCardBreakfast.appendChild(smallCard);
+    }
+}
+
+
 db.collection('PublicDishes')
     .limit(1)
     .get()
@@ -74,3 +115,29 @@ db.collection('PublicDishes')
     }).catch(err => {
         console.log(err);
     });
+
+
+db.collection('PublicDishes')
+    .limit(3)
+    .where("dishRation", "==", "Dinner")
+    .get()
+    .then((snapshot) => { snapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+        renderSmallCard(doc);
+    });
+    }).catch(err => {
+        console.log(err);
+    });
+
+db.collection('PublicDishes')
+    .limit(3)
+    .where("dishRation", "==", "Breakfast")
+    .get()
+    .then((snapshot) => { snapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+        renderSmallCard(doc);
+    });
+    }).catch(err => {
+        console.log(err);
+    });
+
