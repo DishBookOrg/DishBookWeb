@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@firebase/firestore": "^2.3.7",
     "firebase-admin": "^9.9.0"
   }
 }
