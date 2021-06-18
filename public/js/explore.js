@@ -22,11 +22,17 @@
 //     });
 // });
 
-const bigCard = document.querySelector('#big-card')
+const rootDiv = document.querySelector('#dishes-cards')
+const searchDiv = document.getElementById('search-cards')
+
+// const bigCard = document.querySelector('#big-card')
 const smallCardBreakfast = document.querySelector('#small-cards-1')
 const smallCardDinner = document.querySelector('#small-cards-2')
 
-function renderBigCard(doc){
+const searchInput = document.getElementById('search-field')
+const searchButton = document.getElementById('search-icon')
+
+function renderBigCard(doc, elementId){
    
     
     let bigCardImg = document.createElement('div');
@@ -57,7 +63,9 @@ function renderBigCard(doc){
         console.log(url);
         bigCardImg.style.backgroundImage = "url(" + url + ")";
     });
-    bigCard.appendChild(bigCardImg);
+
+    let div = document.getElementById(elementId)
+    div.appendChild(bigCardImg);
 }
 
 function renderSmallCard(doc) {
@@ -103,12 +111,11 @@ db.collection('PublicDishes')
     .get()
     .then((snapshot) => { snapshot.forEach((doc) => {
         console.log(doc.id, " => ", doc.data());
-        renderBigCard(doc);
+        renderBigCard(doc, "big-card");
     });
     }).catch(err => {
         console.log(err);
     });
-
 
 db.collection('PublicDishes')
     .limit(3)
@@ -134,3 +141,31 @@ db.collection('PublicDishes')
         console.log(err);
     });
 
+searchButton.addEventListener("click",function(){
+    
+    console.log( searchInput.textContent);
+    db.collection('PublicDishes')
+    .limit(3)
+    .where("dishName", ">=", searchInput.value)
+    .where("dishName", "<=",  searchInput.value + "z")
+    .get()
+    .then((snapshot) => { 
+
+        rootDiv.style.display = "none";
+        searchDiv.style.display = "flex";
+
+
+        document.querySelectorAll('.big-card-img').forEach(e => e.remove());
+        // let searchCards = document.getElementById("search-cards"); 
+        // document.getElementsByClassName("big-card-img").forEach(element => element.style.display = "none");
+
+        snapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+        console.log("Pereferct Search");
+        
+        renderBigCard(doc, "search-cards");
+    });
+    }).catch(err => {
+        console.log(err);
+    });
+});

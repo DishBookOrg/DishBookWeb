@@ -20,8 +20,8 @@
 
         <!-- Search field -->
         <div class="input-holder">
-            <input type="text" class="search-input" placeholder="Search your dish" />
-            <button class="search-icon"></button>
+            <input type="text" class="search-input" placeholder="Search your dish" id="search-field" />
+            <button class="search-icon" id="search-icon"></button>
         </div>
 
         <!-- Navigation buttons -->
@@ -60,6 +60,13 @@
     </nav>
     
     <!-- Main block with dish cards -->
+    
+    <div class="search-cards" id="search-cards" style="display: none;">
+        <p class="big-card-text">
+            Search Result!
+        </p>
+    </div>
+    
     <div class="dishes-cards" id="dishes-cards">
 
         <!-- The biggest card at the left side -->
