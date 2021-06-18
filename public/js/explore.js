@@ -81,6 +81,7 @@ function renderSmallCard(doc) {
 //Get a big card from the database
 db.collection('PublicDishes')
     .limit(1)
+    .orderBy("dishCreatedTime", "desc")
     .get()
     .then((snapshot) => { snapshot.forEach((doc) => {
         console.log(doc.id, " => ", doc.data());
