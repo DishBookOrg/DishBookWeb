@@ -116,6 +116,7 @@ body {
 
 }
 
+/* Log out block */
 #log-out {
     background: rgba(24, 23, 23, 0.5);
     width: 100%;
@@ -136,7 +137,6 @@ body {
     align-items: center;
     justify-content: center;
     padding: 15px;
-    border: 3px solid  rgba(255, 153, 0, 1);
     border-radius: 10px;
     color:  rgba(255, 153, 0, 1);
     position: absolute;
@@ -149,7 +149,7 @@ body {
 }
 
 #log-out:target {
-      display: block;
+    display: block;
 }
 
 .log-out-btn,
@@ -173,12 +173,9 @@ body {
     justify-content: space-between;
 }
 
-.close:hover{
-    background: #f8e8d2;
-}
-
+.close:hover,
 .log-out-btn:hover {
-    background: #f5e7d5;
+    background: #f8e8d2;
 }
 
 /* Main block with dish cards  */
