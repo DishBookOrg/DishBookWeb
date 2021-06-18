@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New dish</title>
+    <link rel="stylesheet" href="./css/new1.css">
+</head>
+<body>
+    <!-- Header container -->
+    <div class="header">
+        <a class="close-icon" href="./explore.html"> </a>
+        <a class="header-text" href="./new2.html">Next</a>
+    </div>
+
+    <!-- Main content container -->
+    <div class="main-container">
+
+        <!-- Steps -->
+        <div class="rectangles">
+            <div class="selected rectangle"></div>
+            <div class="rectangle"></div>
+            <div class="rectangle"></div>
+            <div class="rectangle"></div>
+        </div>
+
+        <!-- Name input -->
+        <div class="name-block">
+            <input class="input-name" type="text" placeholder="Name">
+            <p class="input-text-under">
+                Write the name of the dish.
+            </p>
+        </div>
+
+        <!-- Privacy -->
+        <div class="privacy-block">
+            <p class="privacy-text">
+                Pick public if you want this recipe to be visible to other users.
+            </p>
+            <div>
+                <label class="checkbox-privacy">
+                    <input type="checkbox">
+                    <span class="checkbox-privacy-switch" data-label-on="Public" data-label-off="Own"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Difficulty  -->
+        <div class="difficulty-block">
+            <p class="difficulty-text">
+                How difficult is it to cook this delicious dish?
+            </p>
+            <div>
+                <label class="checkbox-difficulty">
+                    <input type="checkbox">
+                    <span class="checkbox-difficulty-switch" data-label-on="Normal" data-label-off="Hard"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Servings  -->
+        <div class="servings-block">
+            <p class="servings-text">
+                How many servings your recipe is designed for?
+            </p>
+
+            <div class="number-servings">
+                <p class="number-servings-text">
+                    Servings
+                </p>
+
+                <div class="number-servings-select">
+                    <button class="servings-btn">
+                        -
+                    </button>
+                    <span>
+                        4
+                    </span>
+                    <button class="servings-btn">
+                        +
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
