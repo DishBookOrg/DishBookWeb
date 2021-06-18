@@ -1,40 +1,16 @@
-
-// var docRef = db.collection("PublicDishes").doc("7rs3yWNwDiP35leNpUSJ");
-//     docRef.get().then((doc) => {
-//         if (doc.exists) {
-//             console.log("Document data:", doc.data());
-//         } else {
-//             // doc.data() will be undefined in this case
-//             console.log("No such document!");
-//         }
-//      }).catch((error) => {
-//     console.log("Error getting document:", error);
-// });
-
-//second version
-// db.collection('PublicDishes').get().then((snapshot) => {
-//     console.log(snapshot.docs);
-// })
-
-// db.collection("PublicDishes").get().then((querySnapshot) => {
-//     querySnapshot.forEach((doc) => {
-//         console.log(`${doc.id} => ${doc.data()}`);
-//     });
-// });
-
+//Initialization of constants
 const rootDiv = document.querySelector('#dishes-cards')
 const searchDiv = document.getElementById('search-cards')
 
-// const bigCard = document.querySelector('#big-card')
 const smallCardBreakfast = document.querySelector('#small-cards-1')
 const smallCardDinner = document.querySelector('#small-cards-2')
 
 const searchInput = document.getElementById('search-field')
 const searchButton = document.getElementById('search-icon')
 
+//Render big card
 function renderBigCard(doc, elementId){
    
-    
     let bigCardImg = document.createElement('div');
     bigCardImg.classList.add("big-card-img");
     let bigCardTextBlock = document.createElement('div');
@@ -46,12 +22,10 @@ function renderBigCard(doc, elementId){
     let timeTextBig = document.createElement('p');
     timeTextBig.classList.add("time-text-big");
 
-
     bigCardTextBlock.appendChild(bigCardTextInside);
     bigCardTextBlock.appendChild(imageTime);
     bigCardTextBlock.appendChild(timeTextBig);
     bigCardImg.appendChild(bigCardTextBlock);
-
 
     bigCardTextInside.textContent = doc.data().dishName;
     timeTextBig.textContent = doc.data().dishTotalTime;
@@ -63,11 +37,11 @@ function renderBigCard(doc, elementId){
         console.log(url);
         bigCardImg.style.backgroundImage = "url(" + url + ")";
     });
-
     let div = document.getElementById(elementId)
     div.appendChild(bigCardImg);
 }
 
+//Render small cards
 function renderSmallCard(doc) {
 
     let smallCard = document.createElement('div');
@@ -97,7 +71,6 @@ function renderSmallCard(doc) {
         console.log(url);
         smallCard.style.backgroundImage = "url(" + url + ")";
     });
-
     if (doc.data().dishRation == "Dinner") {
         smallCardDinner.appendChild(smallCard);
     } else {
@@ -105,7 +78,7 @@ function renderSmallCard(doc) {
     }
 }
 
-
+//Get a big card from the database
 db.collection('PublicDishes')
     .limit(1)
     .get()
@@ -117,6 +90,7 @@ db.collection('PublicDishes')
         console.log(err);
     });
 
+//Get a small card for Dinner from the database    
 db.collection('PublicDishes')
     .limit(3)
     .where("dishRation", "==", "Dinner")
@@ -128,7 +102,8 @@ db.collection('PublicDishes')
     }).catch(err => {
         console.log(err);
     });
-
+    
+//Get a small card for Breakfast from the database 
 db.collection('PublicDishes')
     .limit(3)
     .where("dishRation", "==", "Breakfast")
@@ -141,6 +116,7 @@ db.collection('PublicDishes')
         console.log(err);
     });
 
+//Search 
 searchButton.addEventListener("click",function(){
     
     console.log( searchInput.textContent);
@@ -154,11 +130,8 @@ searchButton.addEventListener("click",function(){
         rootDiv.style.display = "none";
         searchDiv.style.display = "flex";
 
-
         document.querySelectorAll('.big-card-img').forEach(e => e.remove());
-        // let searchCards = document.getElementById("search-cards"); 
-        // document.getElementsByClassName("big-card-img").forEach(element => element.style.display = "none");
-
+        
         snapshot.forEach((doc) => {
         console.log(doc.id, " => ", doc.data());
         console.log("Pereferct Search");
