@@ -20,8 +20,8 @@
 
         <!-- Search field -->
         <div class="input-holder">
-            <input type="text" class="search-input" placeholder="Search your dish" />
-            <button class="search-icon"></button>
+            <input type="text" class="search-input" placeholder="Search your dish" id="search-field" />
+            <button class="search-icon" id="search-icon"></button>
         </div>
 
         <!-- Navigation buttons -->
@@ -52,14 +52,34 @@
             </div>
             <div class="nav-button">
                 <p class="img-container">
-                    <a href="./profile.html" class="img profile-img"></a>
+                    <a href="#log-out" class="img profile-img"></a>
                 </p>
                 <p>Profile</p>
             </div>
         </div>
     </nav>
-    
+
+    <!-- Log out block -->
+    <div id="log-out">
+        <div id="log-out-window">
+            <p>
+                Are you sure you want to log out of your profile?
+            </p>
+            <div class="log-out-btns">
+                <a href="./index.html" class="log-out-btn"> Log out</a>
+                <a href="#" class="close">Cancel</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Main block with dish cards -->
+    
+    <div class="search-cards" id="search-cards" style="display: none;">
+        <p class="big-card-text">
+            Search Result!
+        </p>
+    </div>
+    
     <div class="dishes-cards" id="dishes-cards">
 
         <!-- The biggest card at the left side -->
@@ -88,7 +108,6 @@
                     Dinner
                 </p>
                 <div class="small-cards-2"  id="small-cards-2">
-                    
                 </div>
             </div>
         </div>

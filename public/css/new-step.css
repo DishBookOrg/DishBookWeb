@@ -43,50 +43,28 @@ body {
     font-weight: 600;
     font-size: 48px;
     line-height: 41px;
-    width: 725px;
+    width: 655px;
 }
 
-/* Name input */
-.name-block {
-    width: 725px;
-    height: 82px;
-    margin-bottom: 85px;
-}
-
-.input-name {
-    border: none;
-    border-bottom: 3px rgba(60, 60, 67, 0.3) solid;
-    outline: none;
-    background: none;
-    width: 725px;
-    height: 47,83px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 41px;
-}
-
-input::-moz-placeholder {
-    color: #151522;
-}
-
-input::-webkit-input-placeholder{ 
-    color: #151522;
-}
-
-.input-text-under {
-    color: #151522;
+/* Description of dish input */
+.step-description-input {
+    box-shadow: 0px 0px 16px rgba(50, 50, 71, 0.08), 0px 24px 32px rgba(50, 50, 71, 0.08);
+    border-radius: 20px;
+    width: 655px;
+    height: 86px;
     font-size: 20px;
     line-height: 25px;
-    margin-top: 0;
+    outline: none;
+    border: none;
+    padding: 10px;
+    margin-bottom: 52px;
 }
 
-
-/* Amount and unit input */
+/* Hours and minutes input */
 .quantity-block {
-    width: 725px;
+    width: 675px;
     height: 113px;
-    background: rgb(95, 54, 0, 0.8);
+    background: white;
     box-shadow: 0px 24px 32px rgba(50, 50, 71, 0.16);
     border-radius: 20px;
     display: flex;
@@ -116,24 +94,23 @@ input::-webkit-input-placeholder{
     border: none;
     line-height: 28px;  
     width: 310px;
-    border-bottom: 2px rgb(255, 140, 0) solid;
+    border-bottom: 2px black solid;
     text-align: center;
     padding-bottom: 5px;
     margin-top: 0px;
     margin-bottom: 8px;
     background: none;
     outline: none;
-    color: white;
 }
 
 .input-amount::-moz-placeholder,
 .input-unit::-moz-placeholder {
-    color: white;
+    color: black;
 }
 
 .input-amount::-webkit-input-placeholder,
 .input-unit::-webkit-input-placeholder{ 
-    color:white;
+    color:black;
 }
 
 .quantity-name {
@@ -141,5 +118,5 @@ input::-webkit-input-placeholder{
     font-weight: normal;
     font-size: 14px;
     line-height: 20px;
-    color: rgb(255, 140, 0);
+    color: black;
 }

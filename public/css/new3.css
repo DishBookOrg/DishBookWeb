@@ -1,0 +1,133 @@
+/* Background */
+body {
+    margin: 0 auto;
+    background: linear-gradient(262.54deg, #EC7C15 0%, #D0A431 117.27%);
+    font-family: 'Open Sans', sans-serif;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+/* Header block */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 34px 31px;
+    align-items: center;
+}
+
+.close-icon {
+    background: url(../img/close.svg);
+    width: 50px;
+    height: 50px;
+}
+
+.header-text {
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 41px;
+    text-decoration: none;
+}
+
+/* Main block content */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Steps */
+.rectangles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    width: 824px;
+    height: 57px;
+    margin-bottom: 65px;
+}
+
+.rectangle {
+    height: 5px;
+    width: 200px;
+    margin-right: 8px;
+    background: rgba(95, 54, 0, 0.3);
+}
+
+.selected {
+    background: rgba(95, 54, 0);;
+}
+
+.steps-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 41px;
+    margin-left: 30px;
+    margin-top: 0px;
+}
+
+.step-card {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 55px;
+    background: rgba(95, 54, 0, 0.5);
+    width: 929px;
+    height: 150px;
+    box-shadow: 0px 24px 32px rgba(50, 50, 71, 0.16);
+    border-radius: 20px;
+}
+
+.step-img {
+    border-radius: 10px;
+    width: 301px;
+    height: 116px;
+    margin: 16px;
+}
+
+.step-text {
+    display: flex;
+    flex-direction: column;
+    border-left: 3px white solid;
+    height: 100px;
+    justify-content: center;
+    margin-top: 25px;
+    padding-left: 10px;
+    border-radius: 1px;
+}
+
+.step-text-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 34px;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+.step-text-desc {
+    font-size: 20px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.new-step {
+    background: rgb(95, 54, 0, 0.8);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 87.43%;
+    right: 8.4%;
+    top: 77.64%;
+    bottom: 16.5%;
+    font-size: 50px;
+    line-height: 16px;
+    text-decoration: none;
+    color: rgb(184, 110, 21);
+    padding: 10px;
+    text-align: center;
+    border-radius: 30px;
+}
