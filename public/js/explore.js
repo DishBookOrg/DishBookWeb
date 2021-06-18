@@ -28,7 +28,7 @@ function renderBigCard(doc, elementId){
     bigCardImg.appendChild(bigCardTextBlock);
 
     bigCardTextInside.textContent = doc.data().dishName;
-    timeTextBig.textContent = doc.data().dishTotalTime;
+    timeTextBig.textContent = doc.data().dishTotalTime / 60 + " m";
 
     var httpsReference = storage.refFromURL(doc.data().dishImageURL);
     console.log(httpsReference);
@@ -62,7 +62,7 @@ function renderSmallCard(doc) {
     smallCardTextBlock.appendChild(timeTextSmall);
 
     smallCardTextInside.textContent = doc.data().dishName;
-    timeTextSmall.textContent = doc.data().dishTotalTime;
+    timeTextSmall.textContent = doc.data().dishTotalTime / 60 + " m";
 
     var httpsReference = storage.refFromURL(doc.data().dishImageURL);
     console.log(httpsReference);
