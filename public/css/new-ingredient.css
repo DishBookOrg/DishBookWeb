@@ -1,0 +1,143 @@
+/* Background */
+body {
+    margin: 0 auto;
+    background: linear-gradient(262.54deg, #EC7C15 0%, #D0A431 117.27%);
+    font-family: 'Open Sans', sans-serif;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+/* Header block */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 34px 31px;
+    align-items: center;
+}
+
+.back-icon {
+    background: url(../img/back.svg);
+    width: 18px;
+    height: 30px;
+}
+
+.header-text {
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 41px;
+    text-decoration: none;
+}
+
+/* Main block content */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 41px;
+    width: 725px;
+}
+
+/* Name input */
+.name-block {
+    width: 725px;
+    height: 82px;
+    margin-bottom: 85px;
+}
+
+.input-name {
+    border: none;
+    border-bottom: 3px rgba(60, 60, 67, 0.3) solid;
+    outline: none;
+    background: none;
+    width: 725px;
+    height: 47,83px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 41px;
+}
+
+input::-moz-placeholder {
+    color: #151522;
+}
+
+input::-webkit-input-placeholder{ 
+    color: #151522;
+}
+
+.input-text-under {
+    color: #151522;
+    font-size: 20px;
+    line-height: 25px;
+    margin-top: 0;
+}
+
+
+/* Amount and unit input */
+.quantity-block {
+    width: 725px;
+    height: 113px;
+    background: rgb(95, 54, 0, 0.8);
+    box-shadow: 0px 24px 32px rgba(50, 50, 71, 0.16);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.quantity-amount,
+.quantity-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input::-moz-placeholder {
+    color: #151522;
+}
+
+input::-webkit-input-placeholder{ 
+    color: #151522;
+}
+
+.input-amount,
+.input-unit {
+    font-size: 22px;
+    border: none;
+    line-height: 28px;  
+    width: 310px;
+    border-bottom: 2px rgb(255, 140, 0) solid;
+    text-align: center;
+    padding-bottom: 5px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    background: none;
+}
+
+.input-amount::-moz-placeholder,
+.input-unit::-moz-placeholder {
+    color: white;
+}
+
+.input-amount::-webkit-input-placeholder,
+.input-unit::-webkit-input-placeholder{ 
+    color:white;
+}
+
+.quantity-name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(255, 140, 0);
+}
