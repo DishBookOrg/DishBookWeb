@@ -22,16 +22,13 @@
 //     });
 // });
 
-const tryItDiv = document.querySelector('#dishes-cards')
+const bigCard = document.querySelector('#big-card')
 const smallCardBreakfast = document.querySelector('#small-cards-1')
 const smallCardDinner = document.querySelector('#small-cards-2')
 
 function renderBigCard(doc){
    
-    let bigCard = document.createElement('div');
-    bigCard.classList.add("big-card");
-    let bigCardText = document.createElement('p');
-    bigCardText.classList.add("big-card-text");
+    
     let bigCardImg = document.createElement('div');
     bigCardImg.classList.add("big-card-img");
     let bigCardTextBlock = document.createElement('div');
@@ -43,15 +40,12 @@ function renderBigCard(doc){
     let timeTextBig = document.createElement('p');
     timeTextBig.classList.add("time-text-big");
 
-    bigCardText.textContent = "Try it!";
 
     bigCardTextBlock.appendChild(bigCardTextInside);
     bigCardTextBlock.appendChild(imageTime);
     bigCardTextBlock.appendChild(timeTextBig);
     bigCardImg.appendChild(bigCardTextBlock);
 
-    bigCard.appendChild(bigCardText);
-    bigCard.appendChild(bigCardImg);
 
     bigCardTextInside.textContent = doc.data().dishName;
     timeTextBig.textContent = doc.data().dishTotalTime;
@@ -63,9 +57,8 @@ function renderBigCard(doc){
         console.log(url);
         bigCardImg.style.backgroundImage = "url(" + url + ")";
     });
-    tryItDiv.appendChild(bigCard);
+    bigCard.appendChild(bigCardImg);
 }
-
 
 function renderSmallCard(doc) {
 
