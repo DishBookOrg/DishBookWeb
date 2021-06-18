@@ -122,6 +122,8 @@ input::-webkit-input-placeholder{
     margin-top: 0px;
     margin-bottom: 8px;
     background: none;
+    outline: none;
+    color: white;
 }
 
 .input-amount::-moz-placeholder,

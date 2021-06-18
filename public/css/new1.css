@@ -257,3 +257,17 @@ input::-webkit-input-placeholder{
     margin-left: 20px;
     border-radius: 30px;
 }
+
+.input-servings {
+    background: none;
+    border: none;
+    outline: none;
+    width: 35px;
+    height: 35px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+}

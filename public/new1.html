@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New dish</title>
     <link rel="stylesheet" href="./css/new1.css">
+
+    <script src="./js/new1.js" defer></script>
 </head>
 <body>
     <!-- Header container -->
@@ -70,13 +72,11 @@
                 </p>
 
                 <div class="number-servings-select">
-                    <button class="servings-btn">
+                    <button class="servings-btn decrease">
                         -
                     </button>
-                    <span>
-                        4
-                    </span>
-                    <button class="servings-btn">
+                    <input class="input-servings" id="count" type="text" value="4">
+                    <button class="servings-btn increase">
                         +
                     </button>
                 </div>
