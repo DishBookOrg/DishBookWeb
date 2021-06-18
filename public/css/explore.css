@@ -206,6 +206,8 @@ body {
     border-radius: 20px;
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 10px;
+    position: relative;
 }
 
 .big-card-text-block {
@@ -303,4 +305,9 @@ body {
     font-size: 14px;
     line-height: 20px;
     color: #FFFFFF;
+}
+
+.search-cards{
+   flex-direction: column;
+   align-items: center;
 }
