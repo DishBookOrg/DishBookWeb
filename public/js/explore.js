@@ -15,9 +15,16 @@
 // db.collection('PublicDishes').get().then((snapshot) => {
 //     console.log(snapshot.docs);
 // })
+// db.collection("PublicDishes").get().then((querySnapshot) => {
+//     querySnapshot.forEach((doc) => {
+//         console.log(`${doc.id} => ${doc.data()}`);
+//     });
+// });
 
-db.collection("PublicDishes").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        console.log(`${doc.id} => ${doc.data()}`);
-    });
-});
+// const dish = document.getElementById('signInWithGoogle');
+
+// const dishDetail = () => {
+//     window.location.assign('./dishBook.html');
+// }
+
+// dish.addEventListener('click', signInWithGoogle);

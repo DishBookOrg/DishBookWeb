@@ -35,7 +35,7 @@
         //var db = firebase.firestore();
     </script>
     
-    <script>
+    <!-- <script>
         const firebase = require("firebase");
         // Required for side-effects
         require("firebase/firestore");
@@ -47,7 +47,7 @@
         });
 
         let db = firebase.firestore(); 
-    </script>
+    </script> -->
 </head>
 <body>
     <!-- Navigation bar -->
@@ -75,19 +75,19 @@
             </div>
             <div class="nav-button">
                 <p class="img-container">
-                    <a href="#" class=" img new-img"></a>
+                    <a href="new.html" class=" img new-img"></a>
                 </p>
                 <p>New</p>
             </div>
             <div class="nav-button">
                 <p class="img-container">
-                    <a href="#" class="img shop-img"></a>
+                    <a href="shop-list.html" class="img shop-img"></a>
                 </p>
                 <p>Shopping list</p>
             </div>
             <div class="nav-button">
                 <p class="img-container">
-                    <a href="#" class="img profile-img"></a>
+                    <a href="profile.html" class="img profile-img"></a>
                 </p>
                 <p>Profile</p>
             </div>
@@ -124,7 +124,7 @@
                     Breakfast
                 </p>
                 <div class="small-cards-1">
-                    <div class="small-card-1" style="background:url(./img/DishCard/small-card-1.1.png); background-size: cover; background-repeat: no-repeat;">
+                    <div id="chicken-card" class="small-card-1" style="background:url(./img/DishCard/small-card-1.1.png); background-size: cover; background-repeat: no-repeat;">
                         <div class="small-card-text-block">
                             <p class="small-card-text-inside">
                                 Shredded chicken 
